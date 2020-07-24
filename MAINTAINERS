@@ -33,3 +33,11 @@ F: LICENSE-GPL
 F: LICENSE-MIT
 F: MAINTAINERS
 F: CONTRIBUTORS.md
+
+Git submodules
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: submod
+S: Maintained
+F: .gitmodules
+F: submodules/
