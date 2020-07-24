@@ -41,3 +41,17 @@ C: submod
 S: Maintained
 F: .gitmodules
 F: submodules/
+
+Compiler dependencies - common
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: compdeps
+S: Maintained
+F: compdeps/*
+
+Compiler dependencies - gcc
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: compdeps-gcc
+S: Maintained
+F: compdeps/gcc/
