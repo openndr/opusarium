@@ -1,7 +1,7 @@
 # Opusarium
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-[![Release: 0.0.1](https://img.shields.io/badge/release-v0.0.1-blue.svg)](https://github.com/revimal/ktx/releases/tag/v0.0.1)
+[![Release: Not released yet](https://img.shields.io/badge/release-Not_released_yet-blue.svg)](https://github.com/openndr/opusarium)
 
 ### What is the Opusarium
 Opusarium is the C based scheduling framework for high-load tasks.

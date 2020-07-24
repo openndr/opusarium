@@ -1,0 +1,35 @@
+List of Opusarium maintainers
+
+Descriptions of section entries:
+
+	M: Maintainer's full name <address@domain>
+	B: Git branch name
+		One name per line. Multiple R: lines acceptable.
+		If this field set as *, it exceptionally means "all branches that including this area".
+	C: The maintaining tag
+	S: Status, one of the following:
+		Supported:	Someone is actually paid to look after this.
+		Maintained:	Someone acutally looks after it.
+		Broken:		It has maintainer but they don't have time to fix issues.
+		Deprecated:	Old code. It was replaced by a better one and you should not use this.
+		Orphaned:	No current maintainer. If you contribute to this, you should take the role.
+	F: Files and directories with wildcard patterns.
+		A trailing slash includes all files and subdirectory files.
+		F:	lib/lfqueue/	all files in and below lib/lfqueue
+		F:	lib/lfqueue/*	all files in lib/lfqueue, but not below
+		F:	*/lfqueue/*		all files in "any top level directory"/lfqueue
+		One pattern per line. Multiple F: lines acceptable.
+	X: Files and directories that are NOT maintained, same rules as F:
+
+Miscellaneous files
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: misc
+S: Maintained
+F: .git/
+F: .gitignore
+F: README.md
+F: LICENSE-GPL
+F: LICENSE-MIT
+F: MAINTAINERS
+F: CONTRIBUTORS.md

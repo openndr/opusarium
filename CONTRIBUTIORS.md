@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier:	GPL-3.0-or-later -->
+<!-- SPDX-License-Identifier:	GPL-2.0-only -->
 
 # Opusarium Contributor License Agreement
 
@@ -27,7 +27,8 @@ If the contributed code is including third-party works, ensures its license or a
 
 ## Q3. Do I have to hand over my copyright?
 
-**NO. YOU MUST NOT**
+**NO. YOU MUST NOT.**
+
 This not means copyright of your contribution is transferred; you still own the copyright of it.
 You have to preserve own copyright for your contributions.
 
