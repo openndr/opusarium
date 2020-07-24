@@ -55,3 +55,17 @@ B: *
 C: compdeps-gcc
 S: Maintained
 F: compdeps/gcc/
+
+Architecture dependencies - common
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: archdeps
+S: Maintained
+F: archdeps/*
+
+Architecture dependencies - amd64
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: compdeps-amd64
+S: Maintained
+F: compdeps/amd64
