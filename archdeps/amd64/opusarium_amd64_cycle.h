@@ -12,7 +12,12 @@ typedef enum
 	OPUSARIUM_CYCLE_COUNTER_REF_CYCLES (1 << 30) + 2,
 } opusarium_cycle_counter_t;
 
-static opusarium_strong_inline uint64_t opusarium_cycle_rdtsc()
+static opusarium_strong_inline void opusarium_cycle_relax(void)
+{
+	_mm_pause();
+}
+
+static opusarium_strong_inline uint64_t opusarium_cycle_rdtsc(void)
 {
 	return _rdtsc();
 }
