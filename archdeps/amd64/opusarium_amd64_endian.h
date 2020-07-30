@@ -6,7 +6,7 @@
 
 #include <opusraium_compdeps.h>
 
-static opusarium_strong_inline uint16_t opusarium_endian_const_conv16( uint16_t u16 )
+static opusarium_strong_inline uint16_t opusarium_endian_const_conv16(uint16_t u16)
 {
 	return (uint16_t)(
 			((u16 & UINT16_C(0x00ff)) << 8) |
@@ -14,7 +14,7 @@ static opusarium_strong_inline uint16_t opusarium_endian_const_conv16( uint16_t 
 			);
 }
 
-static opusarium_strong_inline uint32_t opusarium_endian_const_conv32( uint32_t u32 )
+static opusarium_strong_inline uint32_t opusarium_endian_const_conv32(uint32_t u32)
 {
 	return (uint32_t)(
 			((u32 & UINT32_C(0x000000ff)) << 24) |
@@ -24,7 +24,7 @@ static opusarium_strong_inline uint32_t opusarium_endian_const_conv32( uint32_t 
 			);
 }
 
-static opusarium_strong_inline uint64_t opusarium_endian_const_conv64( uint64_t u64 )
+static opusarium_strong_inline uint64_t opusarium_endian_const_conv64(uint64_t u64)
 {
 	return (uint64_t)(
 			((u64 & UINT64_C(0x00000000000000ff)) << 56) |
@@ -38,17 +38,17 @@ static opusarium_strong_inline uint64_t opusarium_endian_const_conv64( uint64_t 
 			);
 }
 
-static opusarium_strong_inline uint16_t opusarium_endian_runtime_conv16( uint16_t u16 )
+static opusarium_strong_inline uint16_t opusarium_endian_runtime_conv16(uint16_t u16)
 {
 	return opusraium_endian_const_conv16(u16);
 }
 
-static opusarium_strong_inline uint32_t opusarium_endian_runtime_conv32( uint32_t u32 )
+static opusarium_strong_inline uint32_t opusarium_endian_runtime_conv32(uint32_t u32)
 {
 	return _bswap(u32);
 }
 
-static opusarium_strong_inline uint64_t opusarium_endian_runtime_conv64( uint64_t u64 )
+static opusarium_strong_inline uint64_t opusarium_endian_runtime_conv64(uint64_t u64)
 {
 	return _bswap64(u64);
 }
