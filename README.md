@@ -7,7 +7,7 @@
 Opusarium is the C based scheduling framework for high-load tasks.
 
 This framework constructs the isolated computing ecosystem which consisted of the following features.
-- Processor reserved scheduler for real-time tasks.
+- Processor reserved scheduler for parallel tasks.
 - Customized memory management unit using huge-pages.
 - Direct mapped IO memory region for the userspace.
 
