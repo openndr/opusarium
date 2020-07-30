@@ -69,3 +69,17 @@ B: *
 C: compdeps-amd64
 S: Maintained
 F: compdeps/amd64
+
+Cross-platform environments
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: crossenv
+S: Maintained
+F: crossenv/
+
+Cross-platform environments - linux
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: crossenv-linux
+S: Maintained
+F: crossenv/linux/
