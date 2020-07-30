@@ -50,6 +50,7 @@ int opusarium_thread_spawn(opusarium_thread_t *thread, opusarium_thread_conf_t *
 	opusarium_thread_state_t expected_state = OPUSARIUM_THREAD_STATE_IDLE;
 	opusarium_cpu_mask_t cpu_mask;
 	opusarium_cpu_mask_t cpu_affinity;
+	uint64_t thread_id;
 	int linux_tid;
 	int ret;
 
@@ -64,8 +65,18 @@ int opusarium_thread_spawn(opusarium_thread_t *thread, opusarium_thread_conf_t *
 		goto err;
 	}
 
-	thread->thread_id = OPUSARIUM_THREAD_ERRID;
-	thread->envpid = (uint64_t)getpid();
+	thread_id = opusarium_thread_next_id;
+	do {
+		thread_id++;
+		if (opusarium_unlikely(thread_id == OPUSARIUM_THREAD_ERRID)) {
+			ret = -EOVERFLOW;
+			goto err_fail_state;
+		}
+	} while (!atomic_compare_exchange_strong(&opusarium_thread_next_id, &thread_id, thread_id));
+	/** do not use 'atomic_compare_exchange_weak' for avoiding the counter waste due to the spurious failure. */
+
+	thread->thread_id = thread_id;
+	thread->thread_envpid = (uint64_t)getpid();
 
 	thread->thread_executor.thread_func = conf->thread_func;
 	thread->thread_executor.thread_arg = conf->thread_arg;
