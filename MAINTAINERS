@@ -34,6 +34,14 @@ F: LICENSE-MIT
 F: MAINTAINERS
 F: CONTRIBUTORS.md
 
+Build supports
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: build
+S: Maintained
+F: mktools/
+F: CMakeLists.txt
+
 Git submodules
 M: Hyeonho Seo <seohho@gmail.com>
 B: *
@@ -70,16 +78,23 @@ C: compdeps-amd64
 S: Maintained
 F: compdeps/amd64
 
-Cross-platform environments
+Library commons
 M: Hyeonho Seo <seohho@gmail.com>
 B: *
-C: crossenv
+C: libs
 S: Maintained
-F: crossenv/
+F: libs/*
 
-Cross-platform environments - linux
+Threading library
 M: Hyeonho Seo <seohho@gmail.com>
 B: *
-C: crossenv-linux
+C: libthread
 S: Maintained
-F: crossenv/linux/
+F: crosslibs/opusarium_thread/*
+
+Threading library - linux
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: libthread-linux
+S: Maintained
+F: crosslibs/opusarium_thread/linux/
