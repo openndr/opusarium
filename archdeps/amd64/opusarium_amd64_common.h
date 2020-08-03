@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #ifndef OPUSARIUM_AMD64_COMMON_H
 #define OPUSARIUM_AMD64_COMMON_H
 

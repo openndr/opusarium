@@ -1,3 +1,5 @@
+# SPDX-License-Identifier:	MPL-2.0
+
 try_run(
 	run_result_unused
 	compile_result_unused

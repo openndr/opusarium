@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #if defined(__arm__) || defined(_M_ARM)
 #if defined(__ARM_ARCH_2__)
 #error OPUSARIUM_TEST_ARCHITECTURE_RESULT armv2

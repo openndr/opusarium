@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #include "opusarium_thread.h"
 
 uint64_t opusarium_cache_align opusarium_thread_next_id;

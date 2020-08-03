@@ -1,3 +1,5 @@
+# SPDX-License-Identifier:	MPL-2.0
+
 if(${CMAKE_C_COMPILER_ID} STREQUAL "GNU")
 	if(${CMAKE_VERSION} VERSION_LESS "3.12.0")
 		add_definitions(-DOPUSARIUM_BUILD_COMPILER_GCC)

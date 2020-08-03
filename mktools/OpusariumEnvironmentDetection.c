@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #if defined(_AIX)
 #error OPUSARIUM_BUILD_ENVIRONMENT_RESULT aix
 #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier:	MPL-2.0
+
 add_library(opusarium_thread STATIC "")
 target_include_directories(opusarium_thread PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 

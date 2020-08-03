@@ -1,1 +1,3 @@
+# SPDX-License-Identifier:	MPL-2.0
+
 add_subdirectory(opusarium_thread)

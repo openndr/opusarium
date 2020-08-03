@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #ifndef OPUSARIUM_COMPDEPS_H
 #define OPUSARIUM_COMPDEPS_H
 

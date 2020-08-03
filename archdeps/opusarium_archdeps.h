@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #ifndef OPUSARIUM_ARCHDEPS_H
 #define OPUSARIUM_ARCHDEPS_H
 

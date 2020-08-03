@@ -1,3 +1,5 @@
+# SPDX-License-Identifier:	MPL-2.0
+
 include(CheckLanguage)
 check_language(C)
 if(CMAKE_C_COMPILER)
