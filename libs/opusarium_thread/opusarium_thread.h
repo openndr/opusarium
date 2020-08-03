@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier:	MPL-2.0 */
+
 #ifndef OPUSARIUM_THREAD_H
 #define OPUSARIUM_THREAD_H
 

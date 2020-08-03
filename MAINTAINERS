@@ -1,3 +1,5 @@
+SPDX-License-Identifier:	MPL-2.0
+
 List of Opusarium maintainers
 
 Descriptions of section entries:
@@ -7,6 +9,7 @@ Descriptions of section entries:
 		One name per line. Multiple R: lines acceptable.
 		If this field set as *, it exceptionally means "all branches that including this area".
 	C: The maintaining tag
+		If the maintaining tag can not be determined for changes, use 'undef' as default.
 	S: Status, one of the following:
 		Supported:	Someone is actually paid to look after this.
 		Maintained:	Someone acutally looks after it.
@@ -28,11 +31,18 @@ C: misc
 S: Maintained
 F: .git/
 F: .gitignore
+F: LICENSE
 F: README.md
-F: LICENSE-GPL
-F: LICENSE-MIT
 F: MAINTAINERS
 F: CONTRIBUTORS.md
+
+Build supports
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: build
+S: Maintained
+F: mktools/
+F: CMakeLists.txt
 
 Git submodules
 M: Hyeonho Seo <seohho@gmail.com>
@@ -70,16 +80,23 @@ C: compdeps-amd64
 S: Maintained
 F: compdeps/amd64
 
-Cross-platform environments
+Library commons
 M: Hyeonho Seo <seohho@gmail.com>
 B: *
-C: crossenv
+C: libs
 S: Maintained
-F: crossenv/
+F: libs/*
 
-Cross-platform environments - linux
+Threading library
 M: Hyeonho Seo <seohho@gmail.com>
 B: *
-C: crossenv-linux
+C: libthread
 S: Maintained
-F: crossenv/linux/
+F: crosslibs/opusarium_thread/*
+
+Threading library - linux
+M: Hyeonho Seo <seohho@gmail.com>
+B: *
+C: libthread-linux
+S: Maintained
+F: crosslibs/opusarium_thread/linux/
