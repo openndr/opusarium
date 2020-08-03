@@ -9,6 +9,7 @@ Descriptions of section entries:
 		One name per line. Multiple R: lines acceptable.
 		If this field set as *, it exceptionally means "all branches that including this area".
 	C: The maintaining tag
+		If the maintaining tag can not be determined for changes, use 'undef' as default.
 	S: Status, one of the following:
 		Supported:	Someone is actually paid to look after this.
 		Maintained:	Someone acutally looks after it.
