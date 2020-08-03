@@ -31,9 +31,8 @@ C: misc
 S: Maintained
 F: .git/
 F: .gitignore
+F: LICENSE
 F: README.md
-F: LICENSE-GPL
-F: LICENSE-MIT
 F: MAINTAINERS
 F: CONTRIBUTORS.md
 
