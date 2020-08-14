@@ -2,6 +2,8 @@
 
 #include "opusarium_thread.h"
 
+#include <opusarium_memory.h>
+
 uint64_t opusarium_cache_align opusarium_thread_next_id;
 
 static int opusarium_thread_executor_wrapfn(void *linux_arg)

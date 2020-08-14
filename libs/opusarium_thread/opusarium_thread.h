@@ -6,6 +6,11 @@
 #include <stdbool.h>
 #include <inttypes.h>
 
+#include <opusarium_compdeps.h>
+#include <opusarium_archdeps.h>
+#include <opusarium_cpu.h>
+#include <opusarium_numa.h>
+
 #define OPUSARIUM_THREAD_ERRID (UINT64_MAX)
 
 typedef int (*opusarium_thread_func_t)(void *);
@@ -25,7 +30,7 @@ typedef struct opusarium_cache_align {
 
 	uint32_t is_avoid_mask;
 	opusarium_cpu_type_t cpu_type;
-	opusarium_cpu_affin_t affinity_mask;
+	opusarium_cpu_mask_t affinity_mask;
 
 	uint32_t is_manual_stack;
 	union {
