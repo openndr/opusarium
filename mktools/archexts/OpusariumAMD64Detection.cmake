@@ -115,4 +115,4 @@ if(NOT ${OPUSARIUM_CMAKE_AMD64_ADJCLK} EQUAL "-1")
     endif()
 endif()
 
-message("-- Opusarium AMD64 extensions: ${OPUSARIUM_CMAKE_AMD64_EXTLST}")
+message(STATUS "Opusarium AMD64 extensions: ${OPUSARIUM_CMAKE_AMD64_EXTLST}")
