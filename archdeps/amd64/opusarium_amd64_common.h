@@ -3,9 +3,11 @@
 #ifndef OPUSARIUM_AMD64_COMMON_H
 #define OPUSARIUM_AMD64_COMMON_H
 
+#include <opusarium_compdeps.h>
+
 #define OPUSARIUM_COMMON_INTERNAL_CACHELINE 64
 
 #define opusarium_cache_align \
-	opusarium_align(OPUSARIUM_COMMON_INTERNAL_CACHELINE)
+    opusarium_align(OPUSARIUM_COMMON_INTERNAL_CACHELINE)
 
 #endif /* OPUSARIUM_AMD64_COMMON_H */
