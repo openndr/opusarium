@@ -3,28 +3,52 @@
 #ifndef OPUSARIUM_GCC_COMMON_H
 #define OPUSARIUM_GCC_COMMON_H
 
-#define opusarium_unused __attribute__((unused))
-#define opusarium_strong_inline inline __attribute__((always_inline))
-#define opusarium_align(v) __attribute__((aligned(v)))
-#define opusarium_packed() __attribute__((packed))
+#undef opusarium_unused
+#define opusarium_unused \
+    __attribute__((unused))
 
-#define opusarium_buitin_const(x) __builtin_constant_p(x)
-#define opusarium_likley(x)	__builtin_expect((x), 1)
-#define opusarium_unlikely(x) __builtin_expect((x), 0)
-#define opusarium_typeof(x) __typeof__(x)
+#undef opusarium_strong_inline
+#define opusarium_strong_inline \
+    __attribute__((always_inline)) inline
 
-#define OPUSARIUM_INTERNAL_VPTRTYPE(t) __volatile__ t *
-#define OPUSARIUM_INTERNAL_VPTRSET(v) \
-	((OPUSARIUM_INTERNAL_VPTRTYPE(opusarium_typeof(v)))&(v))
-#define opusarium_access_once(v) (*(OPUSARIUM_INTERNAL_VPTRSET(v)))
+#undef opusarium_align
+#define opusarium_align(_i) \
+    __attribute__((aligned(_i)))
 
-#define opusarium_base_of(sptr, mptr, member) \
-	({(sptr) = (opusarium_typeof(sptr))(((void *)mptr) - (void *)&((opusarium_typeof(sptr)0)->member)); sptr})
+#undef opusarium_packed
+#define opusarium_packed() \
+    __attribute__((packed))
 
-#define opusarium_container_of(ptr, type, member) \
-	({type *__ret; opusarium_base_of(__ret, ptr, member); __ret})
+#undef opusarium_builtin_const
+#define opusarium_builtin_const(_c) \
+    __builtin_constant_p(_c)
 
-#define opusarium_typechk(type, v) \
-	{opusarium_typeof(x) *__checker = (type *)0;}
+#undef opusarium_likely
+#define opusarium_likely(_c) \
+    __builtin_expect(!!(_c), 1)
+
+#undef opusarium_unlikely
+#define opusarium_unlikely(_c) \
+    __builtin_expect(!!(_c), 0)
+
+#undef opusarium_typeof
+#define opusarium_typeof(_t) \
+    __typeof__(_t)
+
+#undef opusarium_access_once
+#define opusarium_access_once(_v) \
+    (*opusarium_gcc_vptrset(_v))
+
+#undef opusarium_base_of
+#define opusarium_base_of(_p_struct, _p_member, _x) \
+    ({(_p_struct) = (void *)(_p_member) - (void *)&((opusarium_typeof((_p_struct)))0)->member; (_p_struct)})
+
+#undef opusarium_container_of
+#define opusarium_container_of(_p, _t, _x) \
+    ({_t *_r; opusarium_base_of(_r, _p, _x); _r})
+
+#undef opusarium_is_type
+#define opusarium_is_type(_t, _v) \
+    {opusarium_typeof(x) *_r = (_t *)0;}
 
 #endif /* OPUSARIUM_GCC_COMMON_H */
