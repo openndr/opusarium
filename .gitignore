@@ -1,0 +1,14 @@
+# GDB Session Files
+.gdb_history
+peda-session-*.txt
+
+# Dev Environment Files
+*.swp
+.vscode/
+tags
+
+# Doxygen Output DIR
+doxygen/
+
+# CMake Build DIR
+build/
